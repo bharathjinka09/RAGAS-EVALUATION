@@ -10,17 +10,17 @@ Set up the project dependency structure using either uv or pip:
 Option A: Using uv (Recommended)
 
 ## Bootstrap an evaluation project template directly
-uvx ragas quickstart rag_eval
+``` uvx ragas quickstart rag_eval ```
 
 Option B: Using pip
 
 ## Install the core framework package
-pip install ragas
+``` pip install ragas ```
 
 📊 Core RAG Evaluation Metrics
 
-• <p> Faithfulness: Measures the factual consistency of the generated response against the retrieved context fragments.</p>
-• <p> Answer Relevancy: Measures how pertinent the generated response is to the user's initial question.</p>
-• <p> Context Precision & Recall: Benchmarks the retrieval layer to verify whether the most relevant information was fetched successfully.</p>
-• <p> Answer Correctness: Measures the factual and semantic accuracy of the generated answer against a specified ground-truth reference.</p>
+<p>• Faithfulness: Measures the factual consistency of the generated response against the retrieved context fragments.</p>
+<p>• Answer Relevancy: Measures how pertinent the generated response is to the user's initial question.</p>
+<p>• Context Precision & Recall: Benchmarks the retrieval layer to verify whether the most relevant information was fetched successfully.</p>
+<p>• Answer Correctness: Measures the factual and semantic accuracy of the generated answer against a specified ground-truth reference.</p>
 
