@@ -19,8 +19,8 @@ pip install ragas
 
 📊 Core RAG Evaluation Metrics
 
-• Faithfulness: Measures the factual consistency of the generated response against the retrieved context fragments.
-• Answer Relevancy: Measures how pertinent the generated response is to the user's initial question.
-• Context Precision & Recall: Benchmarks the retrieval layer to verify whether the most relevant information was fetched successfully.
-• Answer Correctness: Measures the factual and semantic accuracy of the generated answer against a specified ground-truth reference.
+• <p> Faithfulness: Measures the factual consistency of the generated response against the retrieved context fragments.</p>
+• <p> Answer Relevancy: Measures how pertinent the generated response is to the user's initial question.</p>
+• <p> Context Precision & Recall: Benchmarks the retrieval layer to verify whether the most relevant information was fetched successfully.</p>
+• <p> Answer Correctness: Measures the factual and semantic accuracy of the generated answer against a specified ground-truth reference.</p>
 
