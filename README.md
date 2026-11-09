@@ -9,12 +9,12 @@ Set up the project dependency structure using either uv or pip:
 
 Option A: Using uv (Recommended)
 
-# Bootstrap an evaluation project template directly
+## Bootstrap an evaluation project template directly
 uvx ragas quickstart rag_eval
 
 Option B: Using pip
 
-# Install the core framework package
+## Install the core framework package
 pip install ragas
 
 📊 Core RAG Evaluation Metrics
