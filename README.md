@@ -1,26 +1,53 @@
-# RAG Evaluation Framework
+# RAGAS Evaluation Notebook
 
-This repository provides a comprehensive pipeline to benchmark and evaluate Retrieval-Augmented Generation (RAG) workflows using the Ragas Evaluation Framework. It enables automated checking of component performance across key parameters, including context relevance, generation consistency, and answer validity.
+This project contains a Jupyter notebook demonstrating a small retrieval-augmented generation (RAG) pipeline and its evaluation with Ragas. It creates embeddings for example documents, retrieves relevant context with FAISS, generates answers with OpenAI, and evaluates the results with Ragas metrics.
 
+## Requirements
 
-🛡️ Installation
+- Python 3.10 or 3.11
+- An OpenAI API key with access to the models used in the notebook (`text-embedding-3-small` and `gpt-4o`)
 
-Set up the project dependency structure using either uv or pip:
+## Installation
 
-Option A: Using uv (Recommended)
+Open a terminal in the project directory and create a virtual environment:
 
-## Bootstrap an evaluation project template directly
-``` uvx ragas quickstart rag_eval ```
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-Option B: Using pip
+On macOS or Linux, use:
 
-## Install the core framework package
-``` pip install ragas ```
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+```
 
-📊 Core RAG Evaluation Metrics
+Install the notebook dependencies:
 
-<p>• Faithfulness: Measures the factual consistency of the generated response against the retrieved context fragments.</p>
-<p>• Answer Relevancy: Measures how pertinent the generated response is to the user's initial question.</p>
-<p>• Context Precision & Recall: Benchmarks the retrieval layer to verify whether the most relevant information was fetched successfully.</p>
-<p>• Answer Correctness: Measures the factual and semantic accuracy of the generated answer against a specified ground-truth reference.</p>
+```bash
+python -m pip install --upgrade pip
+python -m pip install "ragas==0.1.21" faiss-cpu openai python-dotenv jupyter
+```
 
+Ragas 0.1.21 is pinned because the notebook uses its `evaluate` and `ragas.metrics` APIs.
+
+## Configure your API key
+
+Create a file named `.env` in the project directory and add your key:
+
+```dotenv
+OPENAI_API_KEY=your_openai_api_key
+```
+
+The notebook loads this value with `python-dotenv`. Do not commit or share your `.env` file.
+
+## Run the notebook
+
+Start Jupyter:
+
+```bash
+jupyter notebook
+```
+
+Open `ragas.ipynb` in the browser, select the kernel from the virtual environment, and run the cells from top to bottom. The notebook makes paid OpenAI API calls for embeddings, answer generation, and evaluation; usage charges may apply.
